@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>Frontend Mentor | Clock App</title>
+</head>
+
+<body>
+  
+  <section class="wrapper">
+    <section class="main-section">
+      <div class="quotes">
+        <div class="line-same-dist">
+          <p class="sentence"></p>
+          <div class="refresh-sentence-btn">
+            <img class="refreshBtn" src="./assets/desktop/icon-refresh.svg" alt="">
+          </div>
+        </div>
+        <p class="author"></p>
+      </div>
+      <div class="clock-area-info">
+        <div class="greeting">
+          <div class="icon-message"><img src="./assets/desktop/icon-sun.svg" alt=""></div>
+          <div class="icon-night"><img src="./assets/desktop/icon-moon.svg" alt=""></div>
+          <div class="greeting-message">Good Morning</div>
+          <div class="greeting-afternoon">Good afternoon</div>
+          <div class="greeting-evening">Good evening</div>
+
+          <div class="message">, it's currently</div>
+        </div>
+        <div>
+          <div class="big-clock"> </div><span class="time-standart"></span>
+        </div>
+        <div class="time-area-country">
+          IN <span class="cityTown"></span>, <span class="country"></span>
+        </div>
+        <button class="btn">More</button>
+      </div>
+
+
+      <section class="hidden-clock-info">
+        <div class="time-zone-info">
+          <div class="border-line"></div>
+
+          <div class="line-div">
+            <div class="times">
+              <p class="time-info txt-day night-txt">Current timezone</p>
+              <p class="time-zone txt-day night-txt"></p>
+            </div>
+            <div class="daysweek">
+              <p class="day-week txt-day night-txt">Day of the week</p>
+              <p class="day-of-the-week txt-day night-txt"></p>
+            </div>
+          </div>
+          <div class="line-second-div">
+            <div class="daysyear">
+              <p class="day-year txt-day night-txt">Day of the year</p>
+              <p class="day-of-the-year txt-day night-txt"></p>
+            </div>
+            <div class="weeksnumber">
+              <p class="weeks txt-day night-txt">Week number</p>
+              <p class="week-number txt-day night-txt"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <script src="./script.js" type="text/javascript"></script>
+</body>
+
+</html>

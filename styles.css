@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper {   
+    position: relative;    
+}
+
+.main-section {
+    max-width: 1440px;
+    height: 800px;
+    background: url(./assets/desktop/bg-image-daytime.jpg) rgb(0, 0, 0, 0.4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.main-section-night {
+    max-width: 1440px;
+    height: 800px;
+    background: url(./assets/desktop/bg-image-nighttime.jpg) rgb(0, 0, 0, 0.4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+.line-same-dist {
+    display: flex;
+    flex-direction: row;
+}
+
+.quotes {
+    position: relative;
+    max-width: 572.33px;    
+    padding: 56px 0 0 165px;
+}
+
+.sentence {
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-right: 10px;
+    padding-bottom: 50px;
+}
+
+.author {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    bottom: 0px;
+}
+
+.clock-area-info {
+    position: relative;
+    max-width: 1110px;
+    height: 288px;
+    margin: 0 auto;
+    padding-top: 233px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: row;
+}
+
+.greeting-message {
+    display: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.greeting-afternoon {
+    display: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.greeting-evening {
+    display: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.icon-message {
+    display: none;
+}
+
+.icon-night {
+    display: none;
+}
+
+.message {
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.big-clock {
+    display: inline;
+    font-size: 200px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 5px;
+}
+
+.time-area-country {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4.8px;
+    color: #FFFFFF;
+}
+
+.arrow-icon {
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    vertical-align: middle;
+}
+
+.arrow-icon:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    border-radius: 70px;
+    color: #909090;
+    width: 146px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn::after {
+    content: url(./assets/desktop/icon-arrow-down.svg);
+    padding: 10px 12px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin: 0 0 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn:hover:after {
+    background-color: #999999;
+}
+
+.btn-click {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    border-radius: 70px;
+    color: #909090;
+    width: 146px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-click::after {
+    content: url(./assets/desktop/icon-arrow-up.svg);
+    padding: 8px 10px;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+}
+
+.btn-click:hover::after {
+    color: #999999;
+}
+
+
+
+.hidden-clock-info {
+    position: absolute;
+    max-width: 1440px;
+    width: 100%;
+    height: 400px;
+    background-color: #d8d8d8e6;
+    margin-top: 56px;
+    bottom: 0;
+    display: none;
+}
+
+.hidden-clock-info-night {
+    position: absolute;
+    max-width: 1440px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 56px;
+    bottom: 0;
+    display: none;
+}
+
+.time-zone-info {
+    position: relative;
+    max-width: 844px;
+    height: 252px;
+    padding: 74px 0 0 165px;
+}
+
+.times {
+    max-width: 423px;
+    height: 105px;
+}
+
+.time-info {    
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.time-zone {    
+    font-size: 56px;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+.daysyear {
+    max-width: 176px;
+    height: 105px;
+    padding: 42px 0 0 0;
+}
+
+.day-year {    
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.day-of-the-year {    
+    font-size: 56px;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+.daysweek {
+    position: absolute;
+    max-width: 179px;
+    height: 105px;
+    top: 74px;
+    padding-left: 665px;
+}
+
+.day-week {    
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.day-of-the-week {    
+    font-size: 56px;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+.weeksnumber {
+    position: absolute;
+    max-width: 144px;
+    height: 105px;
+    top: 221px;
+    padding-left: 665px;
+}
+
+.weeks {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.week-number {    
+    font-size: 56px;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+.border-line {
+    width: 1px;
+    height: 252px;
+    background-color: #303030;
+    position: absolute;
+    z-index: 2;
+    margin-left: 570px;
+}
+
+.line-div .line-second-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.time-standart {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 28px;
+}
+
+.cityTown {
+    text-transform: uppercase;
+}
+
+.txt-day {
+    color: #303030;
+}
+
+.night-txt {
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        max-width: 768px;
+        height: 1024px;
+        background-image: url(./assets/tablet/bg-image-daytime.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .main-section-night {
+        max-width: 768px;
+        height: 1024px;
+        background-image: url(./assets/tablet/bg-image-nighttime.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .quotes {
+        position: relative;
+        max-width: 573px;        
+        padding: 80px 0 0 64px;
+    }
+
+    .clock-area-info {
+        position: relative;
+        max-width: 520px;
+        height: 367px;
+        padding: 388px 0 0 64px;
+        margin: 0;
+    }
+
+    .greeting {
+        max-width: 510px;
+    }
+
+    .greeting-message {
+        color: #FFFFFF;
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        line-height: 28px;
+        text-transform: uppercase;
+        padding-left: 20px;
+    }
+
+    .message {
+        color: #FFFFFF;
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 64px;
+        bottom: 0;
+        padding: 10px 14px;
+        border-radius: 70px;
+        color: #909090;
+        width: 146px;
+        height: 56px;
+    }
+
+    .btn-click {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 64px;
+        bottom: 0;
+        padding: 10px 14px;
+        border-radius: 70px;
+        color: #909090;
+        width: 146px;
+        height: 56px;
+    }
+
+    .big-clock {
+        font-size: 176px;
+        letter-spacing: -4.38px;
+        line-height: 175px;
+    }
+
+    .time-area-country {
+        font-size: 18px;
+    }
+
+    .border-line {
+        display: none;
+    }
+
+    .hidden-clock-info {
+        max-width: 768px;
+        width: 100%;
+        height: 440px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .time-zone-info {
+        position: relative;
+        max-width: 538px;
+        height: 202px;
+        padding: 74px 0 0 64px;
+    }
+
+    .times {
+        max-width: 303px;
+        height: 77px;
+    }
+
+    .time-info {
+        font-size: 13px;
+        letter-spacing: 2.6px;
+    }
+
+    .time-zone {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .daysyear {
+        max-width: 153px;
+        height: 77px;
+        padding: 42px 0 0 0;
+    }
+
+    .day-year {
+        font-size: 13px;
+        letter-spacing: 2.6px;
+    }
+
+    .day-of-the-year {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .daysweek {
+        max-width: 155px;
+        height: 77;
+        padding: 0 0 0 383px;
+    }
+
+    .day-week {
+        font-size: 13px;
+        line-height: 28px;
+        letter-spacing: 2.6px;
+    }
+
+    .day-of-the-week {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .weeksnumber {
+        position: absolute;
+        max-width: 125px;
+        height: 77px;
+        top: 192px;
+        padding-left: 383px;
+    }
+
+    .weeks {
+        font-size: 13px;
+        line-height: 28px;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+
+    .week-number {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .time-standart {
+        color: #FFFFFF;
+        font-size: 32px;
+        font-weight: lighter;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-section {
+        max-width: 375px;
+        height: 667px;
+        background-image: url(./assets/mobile/bg-image-daytime.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .main-section-night {
+        max-width: 375px;
+        height: 667px;
+        background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .quotes {
+        position: relative;
+        max-width: 324px;        
+        padding: 31.67px 0 0 26px;
+    }
+
+    .sentence {
+        max-width: 290px;
+        font-size: 12px;
+        line-height: 22px;
+        padding-bottom: 50px;
+    }
+
+    .author {
+        font-size: 12px;
+    }
+
+    .message {
+        display: none;
+    }
+
+    .greeting-message {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .clock-area-info {
+        position: relative;
+        max-width: 290px;
+        height: 185px;
+        padding: 266.33px 0 0 26px;
+        margin: 0;
+    }
+
+    .big-clock {
+        font-size: 100px;
+        letter-spacing: -2.5px;
+        line-height: 100px;
+    }
+
+    .time-area-country {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 13px;
+        line-height: 14px;
+        font-weight: bold;
+        letter-spacing: 3.75px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 26px;
+        bottom: -47px;
+        padding: 10px 14px;
+        border-radius: 70px;
+        color: #909090;
+        width: 115px;
+        height: 39px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .btn::after {
+        content: url(./assets/desktop/icon-arrow-down.svg);
+        padding: 14px 12px;
+        margin: 0px 0 0 10px;
+        position: absolute;
+        right: 3px;
+        top: 5px;
+    }
+
+    .btn-click {
+        font-size: 13px;
+        line-height: 14px;
+        font-weight: bold;
+        letter-spacing: 3.75px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 26px;
+        bottom: -47px;
+        padding: 10px 14px;
+        border-radius: 70px;
+        color: #909090;
+        width: 115px;
+        height: 39px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .btn-click::after {
+        content: url(./assets/desktop/icon-arrow-up.svg);
+        padding: 14px 12px;
+        margin: 0px 0 0 10px;
+        position: absolute;
+        right: 5px;
+        top: -10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn-click:hover::after {
+        color: #909090;
+    }
+
+    .border-line {
+        display: none;
+    }
+
+    .hidden-clock-info {
+        max-width: 375px;
+        width: 100%;
+        height: 256px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .time-zone-info {
+        max-width: 323px;
+        height: 160px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 50px 0 0 10px;
+    }
+
+    .times {
+        max-width: 323px;
+        height: 28px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .time-info {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .time-zone {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .daysweek {
+        max-width: 323px;
+        height: 28px;
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        right: 0;
+        left: 0;
+        position: unset;
+    }
+
+    .day-week {
+        font-size: 10px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        padding: 0;
+    }
+
+    .day-of-the-week {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .daysyear {
+        max-width: 323px;
+        height: 28px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 0 0;
+    }
+
+    .day-year {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .day-of-the-year {
+        font-size: 20px;
+        padding: 0;
+    }
+    
+    .weeksnumber {
+        max-width: 323px;
+        height: 28px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 0 0;
+        position: unset;
+    }
+
+    .weeks {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .week-number {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .time-standart {
+        color: #FFFFFF;
+        font-size: 15px;
+        font-weight: lighter;
+        line-height: 28px;
+    }
+}
