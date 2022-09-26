@@ -46,12 +46,10 @@ function moreLess(e) {
 }
 
 fetch(`https://api.ipbase.com/v2/info?apikey=xGpGSFKuvtlZoYQ6ncCrMpAdJHi1Bk23rkcyDLVj`)
-
     .then(resp => resp.json())
     .then(data => clockDisplayCity(data))
 
 fetch(`http://worldtimeapi.org/api/ip`)
-
     .then(resp => resp.json())
     .then(showData => clockDisplay(showData))
 
