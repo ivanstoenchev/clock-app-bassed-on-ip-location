@@ -49,7 +49,7 @@ fetch(`https://api.ipbase.com/v2/info?apikey=xGpGSFKuvtlZoYQ6ncCrMpAdJHi1Bk23rkc
     .then(resp => resp.json())
     .then(data => clockDisplayCity(data))
 
-fetch(`http://worldtimeapi.org/api/ip`)
+fetch(`https://worldtimeapi.org/api/ip`)
     .then(resp => resp.json())
     .then(showData => clockDisplay(showData))
 
